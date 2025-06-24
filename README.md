@@ -110,4 +110,32 @@ pnpm start
 
 ## License
 
-This project is for demonstration and internal use. Please check with the project owner for licensing details. 
+This project is for demonstration and internal use. Please check with the project owner for licensing details.
+
+## Backend Access
+
+This project is designed to work with a separate backend service that handles chatbot logic and Shopify integration. You can find a reference backend implementation here:
+
+[Shopify Chatbot Backend (GitHub)](https://github.com/ahmedriaz12/Shopify-chatbot-backend.git)
+
+### Setting Up the Backend
+
+1. **Clone the backend repository:**
+   ```bash
+   git clone https://github.com/ahmedriaz12/Shopify-chatbot-backend.git
+   cd Shopify-chatbot-backend
+   ```
+2. **Install Python dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. **Run the backend server:**
+   ```bash
+   python main.py
+   ```
+   (You may need to activate a virtual environment first, e.g., `source venv/bin/activate`)
+
+4. **Configure the frontend to use your backend:**
+   - Update the API endpoint in your frontend's `app/api/chat/route.ts` or set the `NEXT_PUBLIC_API_URL` environment variable to point to your backend server (e.g., `http://localhost:8000`).
+
+For more details, see the backend repository's documentation: [Shopify Chatbot Backend](https://github.com/ahmedriaz12/Shopify-chatbot-backend.git) 
